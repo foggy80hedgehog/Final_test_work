@@ -13,30 +13,32 @@ void PrintArray(string[] matr)
     }
 }
 
-
-
-
 Console.Clear();
 Console.WriteLine("Введите длинну массива ");
 int N = Convert.ToInt32(Console.ReadLine());
 string[] MassivFirst = new string[N];
-string[] MassivTwo = new string[0];
+string[] MassivTwo = new string[N];
 for (int i = 0; i < N; i++)
 {
     Console.WriteLine($"Введите Значение в ячейку {i} массива :");
     MassivFirst[i] = Console.ReadLine();
 }
-/*int j = 0;
+
 for (int i = 0; i < N; i++)
-    
+
 {
-    if (MassivFirst[i].Length >= 3)
-        MassivTwo[j] = MassivFirst[i];
-    j++;
+    if (MassivFirst[i].Length <= 3)
+    {
+        MassivTwo[i] = MassivFirst[i];
+    }
+
 }
-*/
 
 
 
-
-
+Console.Clear();
+Console.WriteLine("Начальный массив");
+PrintArray(MassivFirst);
+Console.WriteLine();
+Console.WriteLine("Отсортированный массив из строк, длина которых меньше либо равна 3");
+PrintArray(MassivTwo);
